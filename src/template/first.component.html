@@ -1,18 +1,37 @@
-<div class="alert row alert-success">{{name}}</div>
-<div class="alert row alert-success">{{age}}</div>
+<h2>{{name}}</h2>
+<button (click)="click_me(nameInput.value)" class="btn">Click Me</button>
 
-<h2>Friends</h2>
+<hr />
+<div class="row">
+    <div class="form-group col-md-6">
+        <label>Name:</label>
+        <input type="text" #nameInput class="form-control"/>
+    </div>
+</div>
+
+<hr />
+<h4>Courses</h4>
 <ul>
-    <li *ngFor="let f of friends; let i = index">
-        {{i}}: {{f.name}} , {{f.age}}
-    </li>
+    <li *ngFor="let c of courses"> {{c}} </li>
 </ul>
 
-<div *ngIf="courses.length > 0">
-<h2>Courses</h2>
-<ul>
-        <li *ngFor="let c of courses">
-            {{c.course_code}} , {{c.course_GPA}}
-        </li>
-    </ul>
+
+<hr />
+<div class="row">
+    <div class="form-group col-md-6">
+        <label>Course Name:</label>
+        <input type="text" #courseInput class="form-control"/><br/>
+        <button (click)="add_course(courseInput.value)" class="btn">Add New Course</button>
+    </div>
+</div>
+
+<h2>Two-Ways Binding</h2>
+<h4>{{country}}</h4>
+
+<hr />
+<div class="row">
+    <div class="form-group col-md-6">
+        <label>Country:</label>
+        <input type="text" [(ngModel)]="country" class="form-control"/>
+    </div>
 </div>

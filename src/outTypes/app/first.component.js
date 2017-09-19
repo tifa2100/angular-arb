@@ -11,29 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var FirstComponent = (function () {
     function FirstComponent() {
-        this.name = "Abu Bakr";
-        this.age = 35;
-        this.friends = [
-            {
-                name: "Mostafa",
-                age: 31
-            },
-            {
-                name: "Yassir",
-                age: 32
-            }
-        ];
-        this.courses = [
-            {
-                course_code: "CS101",
-                course_GPA: 3.5
-            },
-            {
-                course_code: "CS505",
-                course_GPA: 3.7
-            }
-        ];
+        this.name = "Mostafa";
+        this.courses = ["Physics", "Sience"];
+        this.country = "Turkey";
     }
+    FirstComponent.prototype.click_me = function (value) {
+        this.name = value;
+        console.log("==========");
+        console.log(value);
+    };
+    FirstComponent.prototype.add_course = function (value) {
+        this.courses.push(value);
+    };
     return FirstComponent;
 }());
 FirstComponent = __decorate([

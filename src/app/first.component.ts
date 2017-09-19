@@ -7,33 +7,23 @@ import { course, friend } from './interfaces.module';
 })
 
 export class FirstComponent {
-    name:   string;
-    age:    number;
-    friends: friend[];
-    courses: course[];
+    name:string;
+    country: string;
+    courses: any[];
 
     constructor() {
-        this.name = "Abu Bakr";
-        this.age = 35;
-        this.friends = [
-            {
-            name: "Mostafa",
-            age: 31
-        },
-        {
-            name: "Yassir",
-            age: 32
-        }]
+        this.name="Mostafa";
+        this.courses = ["Physics", "Sience"];
+        this.country = "Turkey";
+    }
 
-        this.courses = [
-            {
-                course_code: "CS101",
-                course_GPA: 3.5
-            },
-            {
-                course_code: "CS505",
-                course_GPA: 3.7
-            }
-        ]
+    click_me(value: string){
+        this.name = value;
+        console.log("==========");
+        console.log(value);
+    }
+
+    add_course(value: string){
+        this.courses.push(value);
     }
 }
