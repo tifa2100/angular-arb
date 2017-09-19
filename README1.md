@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Angular QuickStart Source
 [![Build Status][travis-badge]][travis-badge-url]
 
@@ -193,3 +194,7 @@ Shut it down manually with `Ctrl-C`.
 
 [travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/angular/quickstart
+=======
+# angular-arb
+https://www.youtube.com/watch?v=FGIkDZKh4oM&amp;list=PLvLvlVqNQGHCHAmZthrc5YcTRydyUcA1V
+>>>>>>> d18038ac3ded68d926acc00a72d0e348a2254eb0
