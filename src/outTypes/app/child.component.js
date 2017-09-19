@@ -9,18 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var FirstComponent = (function () {
-    function FirstComponent() {
-        this.childData = "";
+var core_2 = require("@angular/core");
+var ChildComponent = (function () {
+    function ChildComponent() {
+        this.childEvent = new core_2.EventEmitter();
+        this.name = "";
     }
-    return FirstComponent;
+    ChildComponent.prototype.sendToParent = function (value) {
+        this.childEvent.emit(value);
+    };
+    return ChildComponent;
 }());
-FirstComponent = __decorate([
+ChildComponent = __decorate([
     core_1.Component({
-        selector: 'first-component',
-        templateUrl: 'template/first.component.html'
+        selector: 'child-component',
+        templateUrl: 'template/child.component.html',
+        inputs: ['name'],
+        outputs: ['childEvent']
     }),
     __metadata("design:paramtypes", [])
-], FirstComponent);
-exports.FirstComponent = FirstComponent;
-//# sourceMappingURL=first.component.js.map
+], ChildComponent);
+exports.ChildComponent = ChildComponent;
+//# sourceMappingURL=child.component.js.map

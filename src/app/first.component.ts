@@ -7,23 +7,9 @@ import { course, friend } from './interfaces.module';
 })
 
 export class FirstComponent {
-    name:string;
-    country: string;
-    courses: any[];
+    childData:string = "";
 
     constructor() {
-        this.name="Mostafa";
-        this.courses = ["Physics", "Sience"];
-        this.country = "Turkey";
-    }
-
-    click_me(value: string){
-        this.name = value;
-        console.log("==========");
-        console.log(value);
-    }
-
-    add_course(value: string){
-        this.courses.push(value);
+        
     }
 }
