@@ -12,6 +12,7 @@ var app_component_1 = require("./app.component");
 var first_component_1 = require("./first.component");
 var home_component_1 = require("./home.component");
 var courses_component_1 = require("./courses.component");
+var single_course_component_1 = require("./single_course.component");
 var about_component_1 = require("./about.component");
 var app_routing_1 = require("./app.routing");
 var AppModule = (function () {
@@ -22,7 +23,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_routing_1.routers],
-        declarations: [app_component_1.AppComponent, first_component_1.FirstComponent, home_component_1.HomeComponent, courses_component_1.CoursesComponent, about_component_1.AboutComponent],
+        declarations: [app_component_1.AppComponent, first_component_1.FirstComponent, home_component_1.HomeComponent, courses_component_1.CoursesComponent, about_component_1.AboutComponent, single_course_component_1.SingleCourseComponent],
         bootstrap: [first_component_1.FirstComponent]
     })
 ], AppModule);

@@ -1,0 +1,7 @@
+<h2>Courses Component</h2>
+
+<ul>
+    <li *ngFor="let c of courses; let i = index;">
+        <a (click)="goToCourse(i)">{{c}}</a>
+    </li>
+</ul>

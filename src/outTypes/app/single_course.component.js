@@ -10,22 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var CoursesComponent = (function () {
-    function CoursesComponent(_router) {
+var SingleCourseComponent = (function () {
+    function SingleCourseComponent(route, _router) {
+        this.route = route;
         this._router = _router;
         this.courses = ["CS101", "MG505", "IT555"];
     }
-    CoursesComponent.prototype.goToCourse = function (index) {
-        this._router.navigate(['/courses', index + 1]);
+    SingleCourseComponent.prototype.ngOnInit = function () {
+        this.id = this.route.snapshot.params['id'];
+        this.id -= 1;
+        if (this.courses.length <= this.id) {
+            this._router.navigate(['/courses']);
+        }
     };
-    return CoursesComponent;
+    return SingleCourseComponent;
 }());
-CoursesComponent = __decorate([
+SingleCourseComponent = __decorate([
     core_1.Component({
-        selector: 'courses-component',
-        templateUrl: 'template/courses.component.html'
+        selector: 'single-course-component',
+        templateUrl: 'template/single-course.component.html'
     }),
-    __metadata("design:paramtypes", [router_1.Router])
-], CoursesComponent);
-exports.CoursesComponent = CoursesComponent;
-//# sourceMappingURL=courses.component.js.map
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
+], SingleCourseComponent);
+exports.SingleCourseComponent = SingleCourseComponent;
+//# sourceMappingURL=single_course.component.js.map
