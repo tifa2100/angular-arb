@@ -1,0 +1,18 @@
+<div class="alert row alert-success">{{name}}</div>
+<div class="alert row alert-success">{{age}}</div>
+
+<h2>Friends</h2>
+<ul>
+    <li *ngFor="let f of friends; let i = index">
+        {{i}}: {{f.name}} , {{f.age}}
+    </li>
+</ul>
+
+<div *ngIf="courses.length > 0">
+<h2>Courses</h2>
+<ul>
+        <li *ngFor="let c of courses">
+            {{c.course_code}} , {{c.course_GPA}}
+        </li>
+    </ul>
+</div>
